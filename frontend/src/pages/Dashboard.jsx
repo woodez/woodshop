@@ -31,10 +31,26 @@ const Dashboard = () => {
         </div>
 
         <div style={styles.grid}>
-          <div style={styles.featureCard}>
+          <div
+            style={styles.featureCard}
+            onClick={() => navigate('/workouts')}
+            role="button"
+            tabIndex={0}
+          >
             <h3 style={styles.featureTitle}>Workouts</h3>
             <p style={styles.featureText}>Log your exercises, sets, and reps</p>
-            <button style={styles.featureButton}>Coming Soon</button>
+            <button style={styles.featureButtonActive}>View Workouts</button>
+          </div>
+
+          <div
+            style={styles.featureCard}
+            onClick={() => navigate('/workouts/new')}
+            role="button"
+            tabIndex={0}
+          >
+            <h3 style={styles.featureTitle}>Start Workout</h3>
+            <p style={styles.featureText}>Begin logging a new workout session</p>
+            <button style={styles.featureButtonActive}>Start Now</button>
           </div>
 
           <div style={styles.featureCard}>
